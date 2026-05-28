@@ -1,0 +1,31 @@
+{
+  "name": "app-orga-jdr",
+  "version": "1.0.0",
+  "description": "App permettant d'automatiser quand les joueurs sont dispos pour une session de JDR",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Noboo3472/app-orga-jdr.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Noboo3472/app-orga-jdr/issues"
+  },
+  "homepage": "https://github.com/Noboo3472/app-orga-jdr#readme",
+  "dependencies": {
+    "@prisma/client": "^7.8.0",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14",
+    "prisma": "^7.8.0"
+  }
+}

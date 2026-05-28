@@ -1,0 +1,13 @@
+//ignore les node_modules et les fichiers de logs
+node_modules/
+logs/
+*.log
+
+#ignore les fichiers de configuration locaux
+.env
+#ignore les fichiers de build
+dist/
+build/
+
+
+/src/generated/prisma
