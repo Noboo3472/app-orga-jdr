@@ -22,7 +22,7 @@ app.listen(PORT, () => {
     console.log(`Serveur fonction sur le port ${PORT}`);
 });
 
-//Déconnecter de la base de donnéesen cas de rejet non géré
+//Déconnecter de la base de données en cas de rejet non géré
 process.on("unhandledRejection", (err) => {
   console.error("Unhandled Rejection:", err);
   server.close(async () => {

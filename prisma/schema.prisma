@@ -10,3 +10,63 @@ generator client {
 datasource db {
   provider = "postgresql"
 }
+
+model User {
+  id String @id @default(uuid())
+  name String
+  email String @unique
+  password String
+  createdAt DateTime @default(now())
+
+  //Relations
+  avaibilities Avaibility[]
+  groups Group[]
+  groupMemberships GroupMember[]
+}
+
+model Avaibility {
+  id String @id @default(uuid())
+  userId String
+  date DateTime
+
+  //Relations
+  user User @relation(fields: [userId], references: [id])
+}
+
+model Group {
+  id String @id @default(uuid())
+  name String
+  description String?
+  adminId String
+
+  //Relations
+  admin User @relation(fields: [adminId], references: [id])
+  members GroupMember[]
+  sessions Session[]
+}
+
+model GroupMember {
+  id String @id @default(uuid())
+  groupId String
+  userId String
+
+  //Relations
+  group Group @relation(fields: [groupId], references: [id])
+  user User @relation(fields: [userId], references: [id])
+}
+
+model Session{
+  id String @id @default(uuid())
+  groupId String
+  date DateTime
+  status SessionStatus @default(Programmé)
+
+  //Relations
+  group Group @relation(fields: [groupId], references: [id])
+}
+
+enum SessionStatus {
+  Programmé
+  En_cours
+  Terminé
+}
