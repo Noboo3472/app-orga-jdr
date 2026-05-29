@@ -2,30 +2,38 @@
   "name": "app-orga-jdr",
   "version": "1.0.0",
   "description": "App permettant d'automatiser quand les joueurs sont dispos pour une session de JDR",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/app.js"
+  "keywords": [],
+  "homepage": "https://github.com/Noboo3472/app-orga-jdr#readme",
+  "bugs": {
+    "url": "https://github.com/Noboo3472/app-orga-jdr/issues"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Noboo3472/app-orga-jdr.git"
   },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
+  "author": "",
   "type": "module",
-  "bugs": {
-    "url": "https://github.com/Noboo3472/app-orga-jdr/issues"
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/app.js"
   },
-  "homepage": "https://github.com/Noboo3472/app-orga-jdr#readme",
   "dependencies": {
+    "@prisma/adapter-pg": "^7.8.0",
     "@prisma/client": "^7.8.0",
+    "bcrypt": "^6.0.0",
     "dotenv": "^17.4.2",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "pg": "^8.21.0"
   },
   "devDependencies": {
+    "@types/node": "^25.9.1",
+    "@types/pg": "^8.20.0",
     "nodemon": "^3.1.14",
-    "prisma": "^7.8.0"
+    "prisma": "^7.8.0",
+    "tsx": "^4.22.3",
+    "typescript": "^6.0.3"
   }
 }
