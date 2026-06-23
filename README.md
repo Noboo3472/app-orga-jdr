@@ -8,3 +8,8 @@ Application web permettant de centraliser les disponibilités d’un groupe de j
 - Prise en compte des disponibilités du MJ.
 - Calcul automatique de la première date commune.
 - Envoi du résultat sur Discord.
+
+### To do
+[[]] Corriger bug avec prisma
+[[]]Tester l'API d'authentification
+[[]]Créer le front de l'inscription
